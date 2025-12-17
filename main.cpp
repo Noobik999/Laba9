@@ -159,8 +159,8 @@ void PrintMatrix(const Matrix& matrix) {
 int main() {
 
     //Певрое задание
-    char* stringa = "Сто одёжек, и все без пуговиц на распашку рубаха рваная!";
-    char* Second_string = " Гром салюта с вечерней улицы от души поздравляю с праздником!";
+    const char* stringa = "Сто одёжек, и все без пуговиц на распашку рубаха рваная!";
+    const char* Second_string = " Гром салюта с вечерней улицы от души поздравляю с праздником!";
     char* copy = CopyString(stringa);
     std::cout<<"Ваша оригинальная строка: "<<stringa<<'\n';
     std::cout<<"Копия вашей строки: "<<copy<<'\n';
@@ -201,4 +201,6 @@ int main() {
     Transposition(matrica1); //Возврат матрицы 1 в первоначальный вид
     if (matrica1 == matrica2) std::cout<<"Матрицы 1 и 2 равны";
     else std::cout<<"Матрицы 1 и 2 не равны";
+    Destruct(matrica1);
+    Destruct(matrica2);
     return 0;}
